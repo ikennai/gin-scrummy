@@ -6,3 +6,64 @@
     height: 100%;
     width: 100%;
 }
+
+// Standard cards
+.gin-scrummy-standard {
+    width: 75%;
+}
+
+.gin-scrummy {
+    &__cards {
+        width: 100%;
+        display: flex;
+        width: 30%;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    &__row {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: 1% 0;
+    }
+
+    &__card {
+        align-items: center;
+        border: solid 4px black;
+        display: flex;
+        height: 10vw;
+        justify-content: center;
+        margin: 10px 0;
+        width: 30%;
+    }
+
+    // Selected cards section
+    &-selected {
+        align-items: center;
+        justify-content: center;
+        background: black;
+        // display: none;
+        // display: flex;
+        height: 100%;
+        opacity: 0.1;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition: opacity 2s;
+        width: 100%;
+
+        // Preview
+        &.preview {
+            // display: block;
+            left: 0;
+            opacity: 1;
+        }
+
+        &__show {
+            display: none;
+        }
+    }
+}
