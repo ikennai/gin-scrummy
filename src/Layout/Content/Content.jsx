@@ -78,8 +78,9 @@ export default class Content extends Component {
         selected.classList.add('close');
         window.setTimeout(() => {
             console.log('>>> removing show classes');
-            selected.classList.remove('preview', 'show');
-            selected.style.display = 'none';
+            selected.classList.remove('preview', 'show', 'showed');
+            // selected.style.display = 'none';
+            document.querySelector('.gin-scrummy-selected__preview').style.display = 'block';
         });
     }
 
@@ -94,6 +95,11 @@ export default class Content extends Component {
         // Show selected card
         const selected = document.querySelector('.gin-scrummy-selected');
 
+        window.setTimeout(() => {
+            document.querySelector('.gin-scrummy-selected__preview').style.display = 'none';
+            selected.classList.add('showed');
+        }, 1000);
+
         selected.classList.add('show');
     }
 
@@ -107,11 +113,11 @@ export default class Content extends Component {
                 </div>
 
                 <div className="gin-scrummy-selected">
-                    <div className="gin-scrummy-selected__preview">
-                        PREVIEW
+                    <div className="gin-scrummy-selected__preview" onClick={() => this.handleShowCard()}>
+                        <span className="gin-scrummy-selected__preview-text">READY</span>
                     </div>
 
-                    <div className="gin-scrummy-selected__show">
+                    <div className="gin-scrummy-selected__show" onClick={() => this.handleCloseCard()}>
                         <ScrummyCard card={this.state.selectedCard} handleClick={this.handleCloseCard} />
                     </div>
                 </div>

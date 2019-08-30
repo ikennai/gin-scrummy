@@ -1,4 +1,5 @@
 .app-container {
+    background-color: #112a44;
     display: flex;
     flex-direction: column;
     /* height: 100vw; */
@@ -7,8 +8,49 @@
     width: 100%;
 }
 
+// Animations
+@keyframes pulse {
+    0% {
+        color: white;
+        font-size: 35px;
+    }
+
+    100% {
+        color: yellow;
+        font-size: 60px;
+    }
+}
+
+@keyframes hide {
+    0% {
+        position: relative;
+        top: 0%;
+    }
+
+    30% {
+        position: relative;
+        top: 20%;
+    }
+
+    // 70% {
+    //     position: relative;
+    //     top: 35%;
+    // }
+
+    100% {
+        position: relative;
+        opacity: 0;
+        top: -15%;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
 // Standard cards
 .gin-scrummy-standard {
+    max-width: 1000px;
     width: 75%;
 }
 
@@ -32,19 +74,34 @@
 
     &__card {
         align-items: center;
-        border: solid 4px black;
+        background-color: #0d2135;
+        border-radius: 20px;
+        box-shadow: 0px 3px 5px #06111c;
+        // border: solid 4px black;
+        color: white;
+        cursor: pointer;
         display: flex;
+        font-size: 8vw;
         height: 10vw;
         justify-content: center;
         margin: 10px 0;
+        text-shadow: none;
         width: 30%;
+
+        &:hover {
+            background-color: #1f4b77;
+        }
+
+        &:active {
+            background-color: #12375b;
+        }
     }
 
     // Selected cards section
     &-selected {
         align-items: center;
         justify-content: center;
-        background: black;
+        background: #0e1a26;
         // display: none;
         // display: flex;
         height: 100%;
@@ -52,7 +109,7 @@
         position: absolute;
         top: 0;
         left: -100%;
-        transition: opacity 2s;
+        transition: opacity .5s;
         width: 100%;
 
         // Preview
@@ -60,10 +117,41 @@
             // display: block;
             left: 0;
             opacity: 1;
+
+            .gin-scrummy-selected__preview-text {
+                animation: pulse 1s infinite;
+                font-style: italic;
+                font-weight: 600;
+            }
+        }
+
+        &__preview {
+            padding: 100px;
         }
 
         &__show {
             display: none;
+            background-color: #0d2135;
+            border: solid 20px #1d456d;
+            border-radius: 10%;
+        }
+
+        &.show {
+            .gin-scrummy-selected__preview {
+                animation: hide 1s 1;
+            }
+        }
+
+        &.showed {
+            // Display gin scrummy selected
+            .gin-scrummy-selected__show {
+                align-items: center;
+                display: flex;
+                height: 80%;
+                justify-content: center;
+                max-width: 1000px;
+                width: 80%;
+            }
         }
     }
 }
