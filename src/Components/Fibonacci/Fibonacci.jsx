@@ -105,7 +105,7 @@ export class Fibonacci extends Component {
 
     render() {
         return (
-            <div>
+            <div className="gin-scrummy-wrapper">
                 <div className="gin-scrummy-fibonacci">
                     <div className="gin-scrummy__cards">
                         {this.state.cards.map(card => <ScrummyCard key={card.value} card={card} handleClick={this.handleSelectCard} />)}
