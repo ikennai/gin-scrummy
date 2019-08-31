@@ -1,4 +1,26 @@
 // Header styles
 .header {
-    flex: 0;
+    background: rgba(0,0,0,.1);
+    position: relative;
+    z-index: 2;
+
+    .navbar-light {
+        color: #fff;
+        flex: 0;
+
+        .navbar-brand {
+            color: #cc56ff;
+        }
+
+        .navbar-toggler {
+            background-color: #cc56ff;
+            border-color: #cc56ff;
+        }
+
+        .nav-item,
+        .nav-link {
+            color: #fff;
+        }
+    }
 }
+

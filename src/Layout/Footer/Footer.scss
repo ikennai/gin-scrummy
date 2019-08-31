@@ -1,7 +1,11 @@
 .footer {
-    background-color: #0c2138;
-    color: #009dff;
+    // background-color: #1a1530;
+    background: rgba(0,0,0,.1);
+    bottom: 0;
+    color: #cc56ff;
     flex: 0;
     padding: 10px;
+    position: absolute;
+    width: 100%;
     text-align: center;
 }

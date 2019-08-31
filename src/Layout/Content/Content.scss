@@ -1,6 +1,25 @@
 .content-container {
     align-items: center;
     display: flex;
-    flex: 1;
+    height: 100%;
     justify-content: center;
+    padding: 56px 0 70px;
+    // padding-bottom: 125px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    // Background
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#112a44+0,cb57f9+24,112a44+100 */
+    background: #112a44; /* Old browsers */
+    background: -moz-linear-gradient(top, #112a44 0%, #cb57f9 24%, #112a44 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #112a44 0%, #cb57f9 24%, #112a44 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        #112a44 0%,
+        #cb57f9 24%,
+        #112a44 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#112a44', endColorstr='#112a44',GradientType=0 ); /* IE6-9 */
 }

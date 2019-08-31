@@ -2,9 +2,13 @@
 // Core imports
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// Routes
+import AppRoutes from './routes';
 
 // Layout Imports
-import Content from "./Layout/Content/Content";
+// import Content from "./Layout/Content/Content";
 import Header from './Layout/Header/Header';
 import { Footer } from "./Layout/Footer/Footer";
 
@@ -15,7 +19,9 @@ const app = document.querySelector('.js-app');
 
 render(
     <div className="app-container">
-       <Header />
-       <Content />
-       <Footer />
+        <Router>
+            <Header />
+            <AppRoutes />
+            <Footer />
+        </Router>
     </div>, app);
