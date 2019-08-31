@@ -4,6 +4,22 @@ import React, { Component } from 'react';
 // ScrummyCard
 import ScrummyCard from '../ScrummyCard/ScrummyCard';
 
+import scrummy0 from '../../assets/files/scrummy-0.svg';
+import scrummy1half from '../../assets/files/scrummy-1-2.svg';
+import scrummy1 from '../../assets/files/scrummy-1-01.svg';
+import scrummy2 from '../../assets/files/scrummy-2-01.svg';
+import scrummy3 from '../../assets/files/scrummy-3-01.svg';
+import scrummy5 from '../../assets/files/scrummy-5-01.svg';
+import scrummy8 from '../../assets/files/scrummy-8-01.svg';
+import scrummy13 from '../../assets/files/scrummy-13-01.svg';
+import scrummy20 from '../../assets/files/scrummy-20-01.svg';
+import scrummy40 from '../../assets/files/scrummy-40-01.svg';
+import scrummy90 from '../../assets/files/scrummy-90-01.svg';
+import scrummy100 from '../../assets/files/scrummy-100.svg';
+import scrummyInfinite from '../../assets/files/scrummy-infinite-01.svg';
+import scrummyQuestion from '../../assets/files/scrummy-question-01.svg';
+import scrummyTeacup from '../../assets/files/scrummy-teacup-01.svg';
+
 export class Standard extends Component {
     constructor() {
         super();
@@ -11,49 +27,49 @@ export class Standard extends Component {
         this.state = {
             cards: [
                 {
-                    value: 0
+                    value: <img src={scrummy0} />
                 },
                 {
-                    value: .5
+                    value: <img src={scrummy1half} />
                 },
                 {
-                    value: 1
+                    value: <img src={scrummy1} />
                 },
                 {
-                    value: 2
+                    value: <img src={scrummy2} />
                 },
                 {
-                    value: 3
+                    value: <img src={scrummy3} />
                 },
                 {
-                    value: 5
+                    value: <img src={scrummy5} />
                 },
                 {
-                    value: 8
+                    value: <img src={scrummy8} />
                 },
                 {
-                    value: 13
+                    value: <img src={scrummy13} />
                 },
                 {
-                    value: 20
+                    value: <img src={scrummy20} />
                 },
                 {
-                    value: 40
+                    value: <img src={scrummy40} />
                 },
                 {
-                    value: 90
+                    value: <img src={scrummy90} />
                 },
                 {
-                    value: 100
+                    value: <img src={scrummy100} />
                 },
                 {
-                    value: '?'
+                    value: <img src={scrummyQuestion} />
                 },
                 {
-                    value: 'Inf'
+                    value: <img src={scrummyInfinite} />
                 },
                 {
-                    value: 'CUP'
+                    value: <img src={scrummyTeacup} />
                 },
             ],
             selectedCard: {}

@@ -4,6 +4,22 @@ import React, { Component } from 'react';
 // ScrummyCard
 import ScrummyCard from '../ScrummyCard/ScrummyCard';
 
+import scrummy0 from '../../assets/files/scrummy-0.svg';
+import scrummy1 from '../../assets/files/scrummy-1-01.svg';
+import scrummy2 from '../../assets/files/scrummy-2-01.svg';
+import scrummy3 from '../../assets/files/scrummy-3-01.svg';
+import scrummy5 from '../../assets/files/scrummy-5-01.svg';
+import scrummy8 from '../../assets/files/scrummy-8-01.svg';
+import scrummy13 from '../../assets/files/scrummy-13-01.svg';
+import scrummy21 from '../../assets/files/scrummy-21-01.svg';
+import scrummy34 from '../../assets/files/scrummy-34-01.svg';
+import scrummy55 from '../../assets/files/scrummy-55-01.svg';
+import scrummy89 from '../../assets/files/scrummy-89-01.svg';
+import scrummy144 from '../../assets/files/scrummy-144-01.svg';
+import scrummyInfinite from '../../assets/files/scrummy-infinite-01.svg';
+import scrummyQuestion from '../../assets/files/scrummy-question-01.svg';
+import scrummyTeacup from '../../assets/files/scrummy-teacup-01.svg';
+
 export class Fibonacci extends Component {
     constructor() {
         super();
@@ -11,49 +27,49 @@ export class Fibonacci extends Component {
         this.state = {
             cards: [
                 {
-                    value: 0
+                    value: <img src={scrummy0} />
                 },
                 {
-                    value: 1
+                    value: <img src={scrummy1} />
                 },
                 {
-                    value: 2
+                    value: <img src={scrummy2} />
                 },
                 {
-                    value: 3
+                    value: <img src={scrummy3} />
                 },
                 {
-                    value: 5
+                    value: <img src={scrummy5} />
                 },
                 {
-                    value: 8
+                    value: <img src={scrummy8} />
                 },
                 {
-                    value: 13
+                    value: <img src={scrummy13} />
                 },
                 {
-                    value: 21
+                    value: <img src={scrummy21} />
                 },
                 {
-                    value: 34
+                    value: <img src={scrummy34} />
                 },
                 {
-                    value: 55
+                    value: <img src={scrummy55} />
                 },
                 {
-                    value: 89
+                    value: <img src={scrummy89} />
                 },
                 {
-                    value: 144
+                    value: <img src={scrummy144} />
                 },
                 {
-                    value: '?'
+                    value: <img src={scrummyQuestion} />
                 },
                 {
-                    value: 'Inf'
+                    value: <img src={scrummyInfinite} />
                 },
                 {
-                    value: 'CUP'
+                    value: <img src={scrummyTeacup} />
                 },
             ],
             selectedCard: {}
@@ -61,8 +77,6 @@ export class Fibonacci extends Component {
     }
 
     handleSelectCard = (selectedCard) => {
-        console.log(this.state);
-        console.log(`You selected card: ${selectedCard.value}`);
 
         this.setState({
             selectedCard
