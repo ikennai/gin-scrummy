@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear();
 export const Footer = (props) => (
     <footer className="footer">
         <div className="js-ad-space">[ ad space placeholder ]</div>
-        Developed by Future Design Works - Copyright &copy; { currentYear }
+        Future Design Works - Copyright &copy; { currentYear }
     </footer>
 );
 
