@@ -1,6 +1,6 @@
 // Header styles
 .header {
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.4);
     position: relative;
     z-index: 2;
 
@@ -20,6 +20,10 @@
         .nav-item,
         .nav-link {
             color: #fff;
+        }
+
+        .nav-link.active {
+            color: #cc56ff;
         }
     }
 }
