@@ -1,8 +1,12 @@
 .about {
     align-self: flex-start;
+    margin: 0 auto;
+    max-width: 1000px;
     padding: 40px 15px;
 
-    h2 {
+    h2,
+    h3,
+    h4 {
         color: #e8b7ff;
     }
 
