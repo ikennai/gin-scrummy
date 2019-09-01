@@ -3,12 +3,10 @@ import React from "react";
 // Styles
 import './Footer.scss';
 
-// const currentYear = new Date().getFullYear();
-
 export const Footer = (props) => (
     <footer className="footer">
         {/* <div className="js-ad-space">[ ad space placeholder ]</div> */}
-        Developed by Future Design Works
+        Developed by <a href="http://www.futuredesignworks.com" rel="noopener noreferrer" target="_blank">Future Design Works</a>
     </footer>
 );
 
